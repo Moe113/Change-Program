@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main()
+{
+double owed, paid;
+int  dollars, quarters, dimes, nickels, cents, remainder, owed1, paid1;
+printf("How much was the item cost ?\n");
+scanf("%lf",&owed); 
+printf("How much did the customer pay ?\n");
+scanf("%lf",&paid); 
+owed1 = owed * 100;  
+paid1 = paid * 100;
+int change = paid1 - owed1;
+dollars =  change / 100;
+remainder = change % 100;
+quarters = remainder / 25;
+remainder = remainder % 25;
+dimes = remainder / 10;
+remainder = remainder % 10;
+nickels = remainder / 5;
+remainder = remainder % 5;
+cents = remainder;
+printf("%d",dollars);
+printf("Dollars:%d, Quarters:%d, Dimes:%d, Nickels:%d, Cents:%d", dollars , quarters , dimes , nickels , cents );
+return 0;
+}
